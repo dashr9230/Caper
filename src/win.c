@@ -548,17 +548,3 @@ WinMain(HINSTANCE instance,
 /*
  *****************************************************************************
  */
-BOOL WINAPI DllMain(
-    HINSTANCE hinstDLL __RWUNUSED__,
-    DWORD fdwReason,
-    LPVOID lpvReserved __RWUNUSED__)
-{
-    if( fdwReason == DLL_PROCESS_ATTACH )
-    {
-
-    }
-}
-
-/*
- *****************************************************************************
- */

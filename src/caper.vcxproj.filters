@@ -1,159 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="main.c" />
-    <ClCompile Include="win.c">
-      <Filter>skel\win</Filter>
-    </ClCompile>
-    <ClCompile Include="skeleton.c">
-      <Filter>skel</Filter>
-    </ClCompile>
-    <ClCompile Include="game.c" />
-    <ClCompile Include="rwsdk\src\badevice.c">
-      <Filter>rwsdk\src</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\baplcore.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\rwstring.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\bamemory.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\badebug.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\bafsys.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\batkreg.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\baerr.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\bavector.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\bamatrix.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\bacolor.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\baframe.c">
-      <Filter>rwsdk\src</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\bastream.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\plcore\rwdbgerr.c">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\bacamera.c">
-      <Filter>rwsdk\src</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\baimage.c">
-      <Filter>rwsdk\src</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\baraster.c">
-      <Filter>rwsdk\src</Filter>
-    </ClCompile>
-    <ClCompile Include="rwsdk\src\batextur.c">
-      <Filter>rwsdk\src</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="rwsdk">
-      <UniqueIdentifier>{4498e381-5bdb-4c81-bf3c-bf3911bd00ec}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="rwsdk\src">
-      <UniqueIdentifier>{9cfb0896-4763-43e5-892b-c482502dfe3c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="rwsdk\src\plcore">
-      <UniqueIdentifier>{4137735b-cfea-4825-bd8e-a3d7748da6d5}</UniqueIdentifier>
+      <UniqueIdentifier>{ec05eb59-44c6-4fb9-9f8e-e89c6619222b}</UniqueIdentifier>
     </Filter>
     <Filter Include="rwsdk\os">
-      <UniqueIdentifier>{2d658bd0-a49e-44fe-803c-6504ee2193dd}</UniqueIdentifier>
+      <UniqueIdentifier>{2b23b62e-fff3-44b2-8217-317c9eee5333}</UniqueIdentifier>
     </Filter>
     <Filter Include="rwsdk\os\win">
-      <UniqueIdentifier>{c2d36807-b556-44c2-b786-8b2a593ade4d}</UniqueIdentifier>
+      <UniqueIdentifier>{af595674-a619-41fc-969f-4b4af0f43fcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rwsdk\src">
+      <UniqueIdentifier>{54806f5c-64ed-4a32-8328-8b0120e6648c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rwsdk\src\plcore">
+      <UniqueIdentifier>{f6a3c0e5-86ce-461f-a69a-270b9bf567d6}</UniqueIdentifier>
     </Filter>
     <Filter Include="skel">
-      <UniqueIdentifier>{42013754-7c3e-4d93-906a-b9e2fae95af8}</UniqueIdentifier>
+      <UniqueIdentifier>{6517209c-1b29-47bd-8a41-ee3e9a981a55}</UniqueIdentifier>
     </Filter>
     <Filter Include="skel\win">
-      <UniqueIdentifier>{b8c4bbc9-8b33-4ad1-9538-d9f09c96f899}</UniqueIdentifier>
+      <UniqueIdentifier>{778bb605-0d0d-46db-9354-d6f9dc689d96}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="rwsdk\src\plcore\batypes.h">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClInclude>
     <ClInclude Include="rwsdk\os\win\ostypes.h">
       <Filter>rwsdk\os\win</Filter>
     </ClInclude>
-    <ClInclude Include="main.h" />
-    <ClInclude Include="win.h">
-      <Filter>skel\win</Filter>
-    </ClInclude>
-    <ClInclude Include="platform.h">
-      <Filter>skel</Filter>
-    </ClInclude>
-    <ClInclude Include="skeleton.h">
-      <Filter>skel</Filter>
-    </ClInclude>
-    <ClInclude Include="game.h" />
-    <ClInclude Include="rwsdk\src\plcore\badevice.h">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\bamemory.h">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\balibtyp.h">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\rwstring.h">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\badebug.h">
-      <Filter>rwsdk\src\plcore</Filter>
-    </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\bafsys.h">
+    <ClInclude Include="rwsdk\src\plcore\bastream.h">
       <Filter>rwsdk\src\plcore</Filter>
     </ClInclude>
     <ClInclude Include="rwsdk\src\plcore\batkreg.h">
       <Filter>rwsdk\src\plcore</Filter>
     </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\baerr.h">
+    <ClInclude Include="rwsdk\src\plcore\batype.h">
       <Filter>rwsdk\src\plcore</Filter>
     </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\batype.h">
+    <ClInclude Include="rwsdk\src\plcore\batypes.h">
       <Filter>rwsdk\src\plcore</Filter>
     </ClInclude>
     <ClInclude Include="rwsdk\src\plcore\bavector.h">
       <Filter>rwsdk\src\plcore</Filter>
     </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\bamatrix.h">
+    <ClInclude Include="rwsdk\src\plcore\rwdbgerr.h">
       <Filter>rwsdk\src\plcore</Filter>
     </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\bamath.h">
+    <ClInclude Include="rwsdk\src\plcore\rwstring.h">
       <Filter>rwsdk\src\plcore</Filter>
     </ClInclude>
     <ClInclude Include="rwsdk\src\plcore\bacolor.h">
       <Filter>rwsdk\src\plcore</Filter>
     </ClInclude>
-    <ClInclude Include="rwsdk\src\baframe.h">
-      <Filter>rwsdk\src</Filter>
-    </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\bastream.h">
+    <ClInclude Include="rwsdk\src\plcore\badebug.h">
       <Filter>rwsdk\src\plcore</Filter>
     </ClInclude>
-    <ClInclude Include="rwsdk\src\plcore\rwdbgerr.h">
+    <ClInclude Include="rwsdk\src\plcore\badevice.h">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="rwsdk\src\plcore\baerr.h">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="rwsdk\src\plcore\bafsys.h">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="rwsdk\src\plcore\balibtyp.h">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="rwsdk\src\plcore\bamath.h">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="rwsdk\src\plcore\bamatrix.h">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClInclude>
+    <ClInclude Include="rwsdk\src\plcore\bamemory.h">
       <Filter>rwsdk\src\plcore</Filter>
     </ClInclude>
     <ClInclude Include="rwsdk\src\bacamera.h">
+      <Filter>rwsdk\src</Filter>
+    </ClInclude>
+    <ClInclude Include="rwsdk\src\baframe.h">
       <Filter>rwsdk\src</Filter>
     </ClInclude>
     <ClInclude Include="rwsdk\src\baimage.h">
@@ -165,6 +90,81 @@
     <ClInclude Include="rwsdk\src\batextur.h">
       <Filter>rwsdk\src</Filter>
     </ClInclude>
+    <ClInclude Include="win.h">
+      <Filter>skel\win</Filter>
+    </ClInclude>
+    <ClInclude Include="platform.h">
+      <Filter>skel</Filter>
+    </ClInclude>
+    <ClInclude Include="skeleton.h">
+      <Filter>skel</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h" />
+    <ClInclude Include="main.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="rwsdk\src\plcore\bastream.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\batkreg.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\bavector.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\rwdbgerr.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\rwstring.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\bacolor.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\badebug.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\baerr.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\bafsys.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\bamatrix.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\bamemory.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\plcore\baplcore.c">
+      <Filter>rwsdk\src\plcore</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\badevice.c">
+      <Filter>rwsdk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\baframe.c">
+      <Filter>rwsdk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\baimage.c">
+      <Filter>rwsdk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\baraster.c">
+      <Filter>rwsdk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\batextur.c">
+      <Filter>rwsdk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="rwsdk\src\bacamera.c">
+      <Filter>rwsdk\src</Filter>
+    </ClCompile>
+    <ClCompile Include="win.c">
+      <Filter>skel\win</Filter>
+    </ClCompile>
+    <ClCompile Include="skeleton.c">
+      <Filter>skel</Filter>
+    </ClCompile>
+    <ClCompile Include="game.c" />
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="rwsdk\src\plcore\errcom.def">
