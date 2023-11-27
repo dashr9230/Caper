@@ -564,6 +564,8 @@ RwTexDictionaryForAllTextures(const RwTexDictionary* dict,
     }
 
     /* TODO: RwTexDictionaryForAllTextures */
+
+    RWRETURN(NULL);
 }
 
 

@@ -157,6 +157,17 @@ extern RwBool       RwTextureSetReadCallBack(RwTextureCallBackRead
 /* Creating/destroying dictionaries */
 extern RwTexDictionary *RwTexDictionaryCreate(void);
 
+/* Textures */
+extern RwBool       RwTextureDestroy(RwTexture* texture);
+
+
+/* Enumerating textures */
+extern const RwTexDictionary *RwTexDictionaryForAllTextures(const
+                                                            RwTexDictionary
+                                                            * dict,
+                                                            RwTextureCallBack
+                                                            fpCallBack,
+                                                            void *pData);
 
 
 /* Opening and closing */
