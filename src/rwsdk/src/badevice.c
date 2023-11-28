@@ -154,7 +154,7 @@ CorePluginAttach(void)
         RwEngineRegisterPlugin(sizeof(rwTextureGlobals), rwID_TEXTUREMODULE,
                                _rwTextureOpen, _rwTextureClose);
 
-
+    // TODO: CorePluginAttach
 }
 
 static void *
