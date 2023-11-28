@@ -282,6 +282,176 @@ RwEngineGetPluginOffset(RwUInt32 pluginID)
 
 
 
+/**
+ * \ingroup rwengine
+ * \ref RwEngineStop is used to stop the RenderWare engine. This
+ * function must be called before any attempt is made to close (and then
+ * terminate, if required) the rendering engine.
+ *
+ * Note the sequence of function calls used to run-up and run-down the RenderWare
+ * engine is as follows: \ref RwEngineInit, \ref RwEngineOpen, \ref RwEngineStart to
+ * run-up and \ref RwEngineStop, \ref RwEngineClose, \ref RwEngineTerm to run-down.
+ *
+ * \return Returns TRUE if successful or FALSE if there is an error.
+ *
+ * \see RwEngineInit
+ * \see RwEngineOpen
+ * \see RwEngineStart
+ * \see RwEngineClose
+ * \see RwEngineTerm
+ *
+ */
+RwBool
+RwEngineStop(void)
+{
+    // TODO: RwEngineStop
+
+    return FALSE;
+}
+
+/**
+ * \ingroup rwengine
+ * \ref RwEngineStart is used to start the RenderWare engine. This
+ * function must only be called after the rendering engine has been
+ * initialized and opened (in that order). This function also initializes
+ * the memory requested by all registered plugins.
+ *
+ * Note the sequence of function calls used to run-up and run-down the RenderWare
+ * engine is as follows: \ref RwEngineInit, \ref RwEngineOpen, \ref RwEngineStart to
+ * run-up and \ref RwEngineStop, \ref RwEngineClose, \ref RwEngineTerm to run-down.
+ *
+ * A NULL return value from any of the registered plugin object constructors 
+ * will cause this function to fail.
+ *
+ * \return Returns TRUE if successful or FALSE if there is an error.
+ *
+ * \see RwEngineInit
+ * \see RwEngineOpen
+ * \see RwEngineStop
+ * \see RwEngineClose
+ * \see RwEngineTerm
+ *
+ */
+RwBool
+RwEngineStart(void)
+{
+    // TODO: RwEngineStart
+
+    return FALSE;
+}
+
+/**
+ * \ingroup rwengine
+ * \ref RwEngineClose is used to close the RenderWare engine by releasing
+ * the currently selected rendering subsystem (graphics device). This
+ * function must only be called after the rendering engine has been stopped.
+ *
+ * Note the sequence of function calls used to run-up and run-down the RenderWare
+ * engine is as follows: \ref RwEngineInit, \ref RwEngineOpen, \ref RwEngineStart to
+ * run-up and \ref RwEngineStop, \ref RwEngineClose, \ref RwEngineTerm to run-down.
+ *
+ * \return Returns TRUE if successful or FALSE if there is an error.
+ *
+ * \see RwEngineInit
+ * \see RwEngineOpen
+ * \see RwEngineStart
+ * \see RwEngineStop
+ * \see RwEngineTerm
+ *
+ */
+RwBool
+RwEngineClose(void)
+{
+    // TODO: RwEngineClose
+
+    return FALSE;
+}
+
+/**
+ * \ingroup rwengine
+ * \ref RwEngineOpen is used to initialize the default rendering subsystem
+ * (graphics device) and video mode. The device is opened on the specified
+ * display. Once the device has been opened use the API functions
+ * \ref RwEngineSetSubSystem and \ref RwEngineSetVideoMode to set the display
+ * device, as appropriate.
+ *
+ * This function must only be called after the rendering engine has been initialized.
+ *
+ * Note the sequence of function calls used to run-up and run-down the RenderWare
+ * engine is as follows: \ref RwEngineInit, \ref RwEngineOpen, \ref RwEngineStart to
+ * run-up and \ref RwEngineStop, \ref RwEngineClose, \ref RwEngineTerm to run-down.
+ *
+ * \param initParams  Pointer to \ref RwEngineOpenParams value describing a
+ *       device-dependent parameter (see example below).
+ *
+ * \return Returns TRUE if successful or FALSE if there is an error.
+ *
+ * \see RwEngineInit
+ * \see RwEngineStart
+ * \see RwEngineStop
+ * \see RwEngineClose
+ * \see RwEngineTerm
+ * \see RwEngineSetSubSystem
+ * \see RwEngineSetVideoMode
+ *
+ * \verbatim
+   To open the RenderWare engine from a Windows application. The variable
+   hwnd is a Windows device handle returned from CreateWindow (type HWND).
+   Assume the engine has been initialized: 
+  
+   RwEngineOpenParams openParams;
+  
+   openParams.displayID = hwnd;
+   if( !RwEngineOpen(&openParams) )
+   {
+       RwEngineTerm();
+       fprintf(stderr, "RwEngineOpen failed\n");
+       ...
+  }
+  \endverbatim
+ *
+ */
+RwBool
+RwEngineOpen(RwEngineOpenParams *initParams)
+{
+    // TODO: RwEngineOpen
+
+    return FALSE;
+}
+
+/**
+ * \ingroup rwengine
+ * \ref RwEngineTerm is used to terminate the RenderWare engine.
+ * Before termination, the engine must first be stopped and then
+ * closed (in that order).
+ * This function should be called before the application closes down.
+ *
+ * Note the sequence of function calls used to run-up and run-down
+ * the RenderWare engine is as follows:
+ * \ref RwEngineInit, \ref RwEngineOpen, \ref RwEngineStart to run-up and
+ * \ref RwEngineStop, \ref RwEngineClose, \ref RwEngineTerm to run-down.
+ *
+ * \return Returns TRUE if successful or FALSE if there is an error.
+ *
+ * \see RwEngineInit
+ * \see RwEngineOpen
+ * \see RwEngineStart
+ * \see RwEngineStop
+ * \see RwEngineClose
+ *
+ */
+RwBool
+RwEngineTerm(void)
+{
+    // TODO: RwEngineTerm
+
+    return FALSE;
+}
+
+
+
+
+
 
 
 

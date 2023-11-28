@@ -15,6 +15,30 @@
 
 #include "batkreg.h"
 
+/****************************************************************************
+ Global Types
+ */
+
+typedef struct RwEngineOpenParams RwEngineOpenParams;
+
+/**
+ * \ingroup datatypes
+ * \struct RwEngineOpenParams
+ * This type is used to specify device dependent parameters 
+ * for use by the API function \ref RwEngineOpen.  
+ * For a Windows application the displayID field 
+ * should be set to the window's handle (of type HWND).  
+ * For NULL and sky libraries displayID=0:
+ */
+struct RwEngineOpenParams
+{
+    char _gap0;
+    // TODO: RwEngineOpenParams
+};
+
+
+
+
 
 /**
  * \ingroup datatypes
@@ -56,8 +80,11 @@ extern RwInt32 RwEngineRegisterPlugin(RwInt32 size, RwUInt32 pluginID,
                                   RwPluginObjectConstructor initCB,
                                   RwPluginObjectDestructor termCB);
 extern RwInt32 RwEngineGetPluginOffset(RwUInt32 pluginID);
-
-
+extern RwBool RwEngineOpen(RwEngineOpenParams *initParams);
+extern RwBool RwEngineStart(void);
+extern RwBool RwEngineStop(void);
+extern RwBool RwEngineClose(void);
+extern RwBool RwEngineTerm(void);
 
 extern RwUInt32 _rwGetNumEngineInstances(void);
 
