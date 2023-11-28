@@ -8,12 +8,12 @@
 
 #include <windows.h>
 
-#include "skeleton.h"
-#include "platform.h"
+#include "../../skeleton.h"
+#include "../../platform.h"
 #include "win.h"
 
 /* Caper includes */
-#include "game.h"
+#include "../../game.h"
 
 static RwBool       ForegroundApp = TRUE;
 static RwBool       RwInitialized = FALSE;
