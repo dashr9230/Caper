@@ -1,7 +1,7 @@
 
 /* temporary including from rwsdk. TODO: remove this */
-#include "rwsdk/src/plcore/batypes.h" /* rwplcore.h */
-#include "rwsdk/os/win/ostypes.h" /* rwplcore.h */
+#include <ostypes.h> /* rwplcore.h */
+#include <batypes.h> /* rwplcore.h */
 
 #include "skeleton.h"
 

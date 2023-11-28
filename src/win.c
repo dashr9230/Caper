@@ -1,9 +1,9 @@
 
 /* temporary including from rwsdk. TODO: remove this */
-#include "rwsdk/os/win/ostypes.h" /* rwplcore.h */
-#include "rwsdk/src/plcore/balibtyp.h"
-#include "rwsdk/src/plcore/batypes.h" /* rwplcore.h */
-#include "rwsdk/src/plcore/rwstring.h"
+#include <ostypes.h> /* rwplcore.h */
+#include <balibtyp.h>
+#include <batypes.h> /* rwplcore.h */
+#include <rwstring.h>
 
 
 #include <windows.h>
