@@ -163,7 +163,41 @@ extern              "C"
 {
 #endif                          /* __cplusplus */
 
+/* Open/Close streams */
 
+extern RwStream *
+_rwStreamInitialize(RwStream *stream,
+                    RwBool rwOwned,
+                    RwStreamType type,
+                    RwStreamAccessType accessType,
+                    const void *pData);
+
+extern RwStream *
+RwStreamOpen(RwStreamType type,
+             RwStreamAccessType accessType,
+             const void *pData);
+
+extern RwBool       
+RwStreamClose(RwStream * stream,
+              void *pData);
+
+
+/* Stream read/write */
+extern RwUInt32     
+RwStreamRead(RwStream * stream,
+             void *buffer,
+             RwUInt32 length);
+
+extern RwStream *
+RwStreamWrite(RwStream * stream,
+              const void *buffer,
+              RwUInt32 length);
+
+
+/* Stream skipping */
+extern RwStream *
+RwStreamSkip(RwStream * stream,
+             RwUInt32 offset);
 
 /* Opening and closing stream module */
 extern void *
