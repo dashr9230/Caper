@@ -73,6 +73,10 @@ extern              "C"
 extern RwBool       RwRasterDestroy(RwRaster * raster);
 
 
+/* Displaying rasters */
+extern RwRaster    *RwRasterShowRaster(RwRaster * raster, void *dev,
+                                       RwUInt32 flags);
+
 
 /* Opening and closing */
 extern void        *_rwRasterClose(void *instance, RwInt32 offset,

@@ -134,8 +134,37 @@ RwRasterDestroy(RwRaster * raster)
 
 
 
+/**
+ * \ingroup rwraster
+ * \ref RwRasterShowRaster is used to copy the specified raster to the
+ * display device. The raster must be of type rwRASTERTYPECAMERA.
+ *
+ * \param raster  Pointer to the raster.
+ * \param dev  A device-dependent parameter, e.g. for Windows applications the
+ *       handle of the output window returned by CreateWindow (type HWND).
+ * \param flags  A \ref RwUInt32 bit-field value equal to the raster display options
+ *       (type \ref RwRasterFlipMode):
+ *
+ *       \li rwRASTERFLIPWAITVSYNC - Wait for the next vertical retrace on
+ *           the output device, if possible, before displaying (full-screen
+ *           applications only). Specify zero otherwise.
+ *
+ * \return Returns pointer to the raster if successful or NULL if there
+ *        is an error.
+ *
+ * \see RwCameraShowRaster
+ * \see RwRasterCreate
+ * \see RwRasterGetFormat
+ *
+ */
+RwRaster           *
+RwRasterShowRaster(RwRaster * raster, void *dev, RwUInt32 flags)
+{
+    // TODO: RwRasterShowRaster
 
-
+    /* Device failure */
+    RWRETURN((RwRaster *) NULL);
+}
 
 
 

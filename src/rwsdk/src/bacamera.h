@@ -8,21 +8,17 @@
 #ifndef RWCAMERA_H
 #define RWCAMERA_H
 
+/****************************************************************************
+ Includes
+ */
 
+#include "baraster.h"
 
 
 typedef struct rwCameraGlobals rwCameraGlobals;
 struct rwCameraGlobals
 {
     RwFreeList         *cameraFreeList;
-};
-
-
-struct RwCamera
-{
-    char _pad[392];
-
-    /* TODO: RwCamera (size: 392 bytes) */
 };
 
 /**
@@ -34,6 +30,17 @@ struct RwCamera
  */
 typedef struct RwCamera RWALIGN(RwCamera, rwCAMERAALIGNMENT);
 
+struct RwCamera
+{
+    char _gap0[0x60];
+
+    /* The cameras image buffer */
+    RwRaster           *frameBuffer;
+
+    char _pad1[292];
+
+    /* TODO: RwCamera (size: 392 bytes) */
+};
 
 
 /****************************************************************************
@@ -44,6 +51,10 @@ typedef struct RwCamera RWALIGN(RwCamera, rwCAMERAALIGNMENT);
 extern              "C"
 {
 #endif                          /* __cplusplus */
+
+/* Displaying results */
+extern RwCamera    *RwCameraShowRaster(RwCamera * camera, void *pDev,
+                                       RwUInt32 flags);
 
 
 /* Open closing */

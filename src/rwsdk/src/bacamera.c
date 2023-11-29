@@ -40,6 +40,11 @@
 
 #include "batkreg.h"
 
+/*
+ * "bapipe.h" requires
+ * typedef struct _RwTexture RwTexture
+ * from  "batextur.h"
+ */
 #include "bacamera.h"
 
 
@@ -148,8 +153,48 @@ _rwCameraOpen(void * instance,
 
 
 
+/**
+ * \ingroup rwcamera
+ * \ref RwCameraShowRaster is used to copy the specified camera's image
+ * raster to the display. This function often immediately follows a
+ * \ref RwCameraBeginUpdate / \ref RwCameraEndUpdate block in order to transfer
+ * the new rendering to the display device.
+ *
+ * \param camera  Pointer to the camera with the image raster to be displayed.
+ * \param dev  Device-dependent parameter, e.g. for Windows applications this is
+ * a handle ('HWND') to the output window returned by CreateWindow.
+ * \param flags  A flags field indicating hints about how to flip.  Valid fields in
+ * this flags are:
+ *
+ *         \li rwRASTERFLIPWAITVSYNC - Flip should happen on next VSync if
+ *             possible. (This flag should be used only for full-screen applications.
+ *             Specify zero if running in a window.)
+ *
+ * \return Returns pointer to the specified camera if successful or NULL
+ * if there is an error.
+ *
+ * \see RwCameraBeginUpdate
+ * \see RwCameraEndUpdate
+ * \see RwRasterShowRaster
+ *
+ */
+RwCamera *
+RwCameraShowRaster(RwCamera *camera, void *dev, RwUInt32 flags)
+{
+    RWAPIFUNCTION(RWSTRING("RwCameraShowRaster"));
+    RWASSERT(cameraModule.numInstances);
+    RWASSERT(camera);
+    RWASSERTISTYPE(camera, rwCAMERA);
+    RWASSERT(camera->frameBuffer);
 
+    if (RwRasterShowRaster(camera->frameBuffer, dev, flags))
+    {
+        RWRETURN(camera);
+    }
 
+    /* Device error */
+    RWRETURN((RwCamera *)NULL);
+}
 
 
 
