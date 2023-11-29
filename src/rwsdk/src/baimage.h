@@ -45,8 +45,6 @@ struct rwImageGlobals
 
     RwFreeList         *imageFormatFreeList;
     rwImageFormat      *imageFormats;
-
-    /* TODO: rwImageGlobals (size: 544 bytes) */
 };
 
 
