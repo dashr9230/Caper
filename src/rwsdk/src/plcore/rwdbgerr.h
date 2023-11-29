@@ -28,6 +28,7 @@ enum RwErrorCodePlugin_errcore
 };
 typedef enum RwErrorCodePlugin_errcore RwErrorCodePlugin_errcore;
 
+#undef RWECODE
 
 #undef RWECODE
 
