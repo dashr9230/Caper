@@ -22,7 +22,7 @@
 
 #include "baraster.h"
 
-
+/* RWPUBLIC */
 
 /* Type ID */
 #define rwTEXDICTIONARY 6
@@ -111,7 +111,7 @@ typedef RwTexture *(*RwTextureCallBackRead)(const RwChar *name,
 
 
 
-
+/* RWPUBLICEND */
 typedef struct rwTextureGlobals rwTextureGlobals;
 struct rwTextureGlobals
 {
@@ -130,7 +130,7 @@ struct rwTextureGlobals
 
 
 
-
+/* RWPUBLIC */
 
 /****************************************************************************
  Function prototypes
@@ -169,6 +169,7 @@ extern const RwTexDictionary *RwTexDictionaryForAllTextures(const
                                                             fpCallBack,
                                                             void *pData);
 
+    /* RWPUBLICEND */
 
 /* Opening and closing */
 extern void        *_rwTextureOpen(void *instance, RwInt32 offset,
@@ -176,14 +177,14 @@ extern void        *_rwTextureOpen(void *instance, RwInt32 offset,
 extern void        *_rwTextureClose(void *instance, RwInt32 offset,
                                     RwInt32 size);
 
-
+    /* RWPUBLIC */
 #ifdef    __cplusplus
 }
 #endif                          /* __cplusplus */
 
 
 
-
+/* RWPUBLICEND */
 
 #endif                          /* RWTEXTUR_H */
 

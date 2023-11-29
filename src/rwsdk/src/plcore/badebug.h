@@ -45,7 +45,7 @@ MACRO_STOP
 
 #endif /* RWDEBUG */
 
-
+/* RWPUBLIC */
 
 
 /****************************************************************************
@@ -57,16 +57,19 @@ extern              "C"
 {
 #endif                          /* __cplusplus */
 
+/* RWPUBLICEND */
+
 /* Opening and closing */
 extern RwBool       _rwDebugOpen(void);
 extern RwBool       _rwDebugClose(void);
 
+/* RWPUBLIC */
 
 #ifdef    __cplusplus
 }
 #endif                          /* __cplusplus */
 
-
+/* RWPUBLICEND */
 
 
 

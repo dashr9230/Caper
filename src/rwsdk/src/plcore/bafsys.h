@@ -29,7 +29,7 @@
 
 
 
-
+/* RWPUBLIC */
 
 /****************************************************************************
  Global Types
@@ -101,8 +101,8 @@ typedef int     (*rwFnFflush)(void *fptr);
  */
 typedef int     (*rwFnFtell)(void *fptr);
 
-
-
+/* RWPUBLICEND */
+/* RWPUBLIC */
 
 /**
  * \ingroup datatypes
@@ -153,6 +153,8 @@ struct RwFileFunctions
     rwFnFtell   rwftell;  /**< Pointer to ftell function */
 };
 
+/* RWPUBLICEND */
+
 #define RwFopen  RWSRCGLOBAL(fileFuncs).rwfopen
 #define RwFclose RWSRCGLOBAL(fileFuncs).rwfclose
 #define RwFread  RWSRCGLOBAL(fileFuncs).rwfread
@@ -165,18 +167,18 @@ struct RwFileFunctions
  Function prototypes
  */
 
-
+/* RWPUBLIC */
 
 #ifdef    __cplusplus
 extern "C"
 {
 #endif                          /* __cplusplus */
-
+/* RWPUBLICEND */
 
 extern RwBool _rwFileSystemOpen(void);
 extern void _rwFileSystemClose(void);
 
-
+/* RWPUBLIC */
 
 
 
@@ -184,7 +186,7 @@ extern void _rwFileSystemClose(void);
 }
 #endif                          /* __cplusplus */
 
-
+/* RWPUBLICEND */
 
 #endif /* RWFSYS_H */
 

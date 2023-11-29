@@ -14,7 +14,7 @@
 
 #include "batkreg.h"
 
-
+/* RWPUBLIC */
 
 struct RwFrame
 {
@@ -33,7 +33,7 @@ struct RwFrame
  */
 typedef struct RwFrame RWALIGN(RwFrame, rwFRAMEALIGNMENT);
 
-
+/* RWPUBLICEND */
 
 typedef struct rwFrameGlobals rwFrameGlobals;
 struct rwFrameGlobals
@@ -47,7 +47,7 @@ struct rwFrameGlobals
 
 
 
-
+/* RWPUBLIC */
 
 /****************************************************************************
  Function prototypes
@@ -60,7 +60,7 @@ extern              "C"
 
 
 
-
+/* RWPUBLICEND */
 
 /* Opening and closing */
 extern void *
@@ -73,9 +73,12 @@ _rwFrameOpen(void *instance,
              RwInt32 offset,
                 RwInt32 size);
 
+/* RWPUBLIC */
 #ifdef    __cplusplus
 }
 #endif                          /* __cplusplus */
+
+/* RWPUBLICEND */
 
 #endif                          /* RWFRAME_H */
 

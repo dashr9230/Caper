@@ -9,6 +9,7 @@
 #ifndef RWIMAGE_H
 #define RWIMAGE_H
 
+/* RWPUBLIC */
 
 typedef struct RwImage RwImage;
 
@@ -18,6 +19,7 @@ struct RwImage
     /* TODO: RwImage (size: 28 bytes) */
 };
 
+/* RWPUBLICEND */
 
 typedef struct rwImageFormat rwImageFormat;
 struct rwImageFormat
@@ -47,7 +49,7 @@ struct rwImageGlobals
     rwImageFormat      *imageFormats;
 };
 
-
+/* RWPUBLIC */
 
 
 
@@ -72,12 +74,12 @@ extern void        *_rwImageOpen(void *instance, RwInt32 offset,
 extern void        *_rwImageClose(void *instance, RwInt32 offset,
                                   RwInt32 size);
 
+    /* RWPUBLIC */
 
 #ifdef    __cplusplus
 }
 #endif                          /* __cplusplus */
-
-
+/* RWPUBLICEND */
 
 #endif                          /* RWIMAGE_H */
 

@@ -15,6 +15,8 @@
 
 #include "batkreg.h"
 
+/* RWPUBLIC */
+
 /****************************************************************************
  Global Types
  */
@@ -86,12 +88,16 @@ extern RwBool RwEngineStop(void);
 extern RwBool RwEngineClose(void);
 extern RwBool RwEngineTerm(void);
 
+/* RWPUBLICEND */
+
 extern RwUInt32 _rwGetNumEngineInstances(void);
 
-
+/* RWPUBLIC */
 #ifdef    __cplusplus
 }
 #endif                          /* __cplusplus */
+
+/* RWPUBLICEND */
 
 #endif /* RWDEVICE_H */
 

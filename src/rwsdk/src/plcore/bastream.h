@@ -8,7 +8,7 @@
 #ifndef RWSTREAM_H
 #define RWSTREAM_H
 
-
+/* RWPUBLIC */
 
 /****************************************************************************
  Global Types
@@ -144,8 +144,7 @@ struct RwMemory
     RwUInt32    length; /**< length in bytes*/
 };
 
-
-
+/* RWPUBLICEND */
 
 typedef struct rwStreamGlobals rwStreamGlobals;
 struct rwStreamGlobals
@@ -153,6 +152,7 @@ struct rwStreamGlobals
     RwFreeList         *streamFreeList;
 };
 
+/* RWPUBLIC */
 
 /****************************************************************************
  Function prototypes
@@ -199,6 +199,8 @@ extern RwStream *
 RwStreamSkip(RwStream * stream,
              RwUInt32 offset);
 
+/* RWPUBLICEND */
+
 /* Opening and closing stream module */
 extern void *
 _rwStreamModuleOpen(void *instance,
@@ -210,11 +212,13 @@ _rwStreamModuleClose(void *instance,
                      RwInt32 offset,
                      RwInt32 size);
 
+
+/* RWPUBLIC */
 #ifdef    __cplusplus
 }
 #endif                          /* __cplusplus */
 
-
+/* RWPUBLICEND */
 
 #endif                          /* RWSTREAM_H */
 

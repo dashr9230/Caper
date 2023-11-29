@@ -24,7 +24,7 @@
 #include "rwstring.h"
 
 
-
+/* RWPUBLIC */
 
 /****************************************************************************
  Defines
@@ -115,7 +115,7 @@ extern void         *RwEngineInstance;
 }
 #endif                          /* __cplusplus */
 
-
+/* RWPUBLICEND */
 
 
 #endif /* RWLIBTYP_H */

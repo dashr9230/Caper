@@ -10,6 +10,8 @@
 #define RWSTRING_H
 
 
+/* RWPUBLIC */
+
 /****************************************************************************
  Defines
  */
@@ -78,7 +80,7 @@ struct RwStringFunctions
     vecSscanfFunc vecSscanf;
 };
 
-
+/* RWPUBLICEND */
 
 /****************************************************************************
  Function prototypes

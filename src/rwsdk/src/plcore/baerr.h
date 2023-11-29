@@ -17,7 +17,7 @@
 
 
 
-
+/* RWPUBLIC */
 /****************************************************************************
  Global Types
  */
@@ -38,14 +38,14 @@ struct RwError
     RwInt32     errorCode; /**< Internal Use */
 };
 
-
+/* RWPUBLICEND */
 typedef struct rwErrorGlobals rwErrorGlobals;
 struct rwErrorGlobals
 {
     RwError     errorCode;                      /* Error code for last error */
 };
 
-
+/* RWPUBLIC */
 #define RWECODE(a,b) a,
 
 /* common errors have the MSB set */
@@ -68,12 +68,12 @@ extern "C"
 {
 #endif                          /* __cplusplus */
 
-
+/* RWPUBLICEND */
 
 extern void *_rwErrorOpen(void *object, RwInt32 offset, RwInt32 size);
 extern void *_rwErrorClose(void *object, RwInt32 offset, RwInt32 size);
 
-
+/* RWPUBLIC */
 
 extern RwError *RwErrorSet(RwError *code);
 extern RwInt32 _rwerror(RwInt32 code, ...);
@@ -82,7 +82,7 @@ extern RwInt32 _rwerror(RwInt32 code, ...);
 }
 #endif                          /* __cplusplus */
 
-
+/* RWPUBLICEND */
 
 #endif /* RWERR_H */
 

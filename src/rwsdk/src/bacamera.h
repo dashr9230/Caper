@@ -21,6 +21,8 @@ struct rwCameraGlobals
     RwFreeList         *cameraFreeList;
 };
 
+/* RWPUBLIC */
+
 /**
  * \ingroup datatypes
  * \typedef RwCamera
@@ -42,6 +44,11 @@ struct RwCamera
     /* TODO: RwCamera (size: 392 bytes) */
 };
 
+/* RWPUBLICEND */
+
+
+
+/* RWPUBLIC */
 
 /****************************************************************************
  Function prototypes
@@ -56,6 +63,7 @@ extern              "C"
 extern RwCamera    *RwCameraShowRaster(RwCamera * camera, void *pDev,
                                        RwUInt32 flags);
 
+/* RWPUBLICEND */
 
 /* Open closing */
 extern void        *_rwCameraClose(void *instance, RwInt32 offset,
@@ -67,6 +75,6 @@ extern void        *_rwCameraOpen(void *instance, RwInt32 offset,
 #ifdef    __cplusplus
 }
 #endif                          /* __cplusplus */
-
+/* RWPUBLICEND */
 
 #endif                          /* RWCAMERA_H */

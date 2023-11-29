@@ -9,6 +9,8 @@
 #ifndef RWTYPE_H
 #define RWTYPE_H
 
+/* RWPUBLIC */
+
 #define MAKECHUNKID(vendorID, chunkID) (((vendorID & 0xFFFFFF) << 8) | (chunkID & 0xFF))
 
 enum RwPluginVendor
@@ -31,6 +33,8 @@ enum RwCriterionPluginID
 };
 typedef enum RwCriterionPluginID RwCriterionPluginID;
 
+/* RWPUBLICEND */
+
 enum RwCriterionCoreID
 {
     /* The valid plugin IDs */
@@ -50,6 +54,10 @@ enum RwCriterionCoreID
 };
 typedef enum RwCriterionCoreID RwCriterionCoreID;
 
+/* RWPUBLIC */
+/* RWPUBLICEND */
+
+/* RWPUBLIC */
 
 typedef struct RwObject RwObject;
 /* CAPER: RwObject size is unknown, only we know is type at offset 0
@@ -94,6 +102,7 @@ MACRO_STOP
 }
 #endif                          /* __cplusplus */
 
+/* RWPUBLICEND */
 
 #endif /* RWTYPE_H */
 

@@ -16,7 +16,7 @@
 #include <stdlib.h>
 
 
-
+/* RWPUBLIC */
 
 /****************************************************************************
  Defines
@@ -175,18 +175,19 @@ extern RwFreeList  *RwFreeListCreate(RwInt32 entrySize,
 
 
 extern RwBool       RwFreeListDestroy(RwFreeList * freelist);
-
+/* RWPUBLICEND */
 
 extern void        *_rwFreeListAllocReal(RwFreeList * freelist);
 extern RwFreeList  *_rwFreeListFreeReal(RwFreeList * freelist,
                                        void *pData);
 
+/* RWPUBLIC */
 
 extern RwFreeList  *RwFreeListForAllUsed(RwFreeList * freelist,
                                          RwFreeListCallBack
                                          fpCallBack, void *pData);
 
-
+/* RWPUBLICEND */
 
 /* Opening/Closing */
 extern void         _rwMemoryClose(void);
@@ -215,7 +216,7 @@ extern RwBool       _rwMemoryOpen(RwMemoryFunctions * memFuncs);
 #define RwFreeListFree(_f, _p)  RWSRCGLOBAL(memoryFree)(_f, _p)
 #endif                          /* (!defined(RwFreeListFree)) */
 
-
+/* RWPUBLICEND */
 
 #endif                          /* RWMEMORY_H */
 

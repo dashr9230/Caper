@@ -17,7 +17,7 @@
 #include "ostypes.h"
 
 
-
+/* RWPUBLIC */
 
 
 
@@ -47,9 +47,13 @@
 #define RWASMAPI(TYPE) TYPE
 #endif /* (!defined(RWASMAPI)) */
 
+/* RWPUBLICEND */
 
+/* RWPUBLIC */
 
+/* RWPUBLICEND */
 
+/* RWPUBLIC */
 
 /****************************************************************************
  Macro wrappers. These are needed everywhere.
@@ -161,7 +165,9 @@ struct RwV3d
     RwReal z;   /**< Z value */
 };
 
+/* RWPUBLICEND */
 
+/* RWPUBLIC */
 
 
 
@@ -244,7 +250,11 @@ struct RwLinkList
 #define rwLinkListGetTerminator(list)                                   \
     (&((list)->link))
 
+/* RWPUBLICEND */
 
+/* RWPUBLIC */
+
+/* RWPUBLICEND */
 
 #endif /* RWTYPES_H */
 

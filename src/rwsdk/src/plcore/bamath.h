@@ -9,7 +9,7 @@
 #ifndef RWMATH_H
 #define RWMATH_H
 
-
+/* RWPUBLIC */
 
 #if (!defined(RwPow))
 #define RwPow(_x, _y)           pow(_x, _y)
@@ -22,5 +22,5 @@
 #endif /* (!defined(rwSqrt)) */
 
 
-
+/* RWPUBLICEND */
 #endif /* RWMATH_H */

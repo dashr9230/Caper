@@ -9,6 +9,7 @@
 #ifndef RWRASTER_H
 #define RWRASTER_H
 
+/* RWPUBLIC */
 
 
 enum RwRasterType
@@ -46,6 +47,7 @@ struct RwRaster
     /* TODO: RwRaster (size: 52 bytes) */
 };
 
+/* RWPUBLICEND */
 
 typedef struct rwRasterGlobals rwRasterGlobals;
 struct rwRasterGlobals
@@ -53,10 +55,11 @@ struct rwRasterGlobals
     RwRaster           *rasterStack[rwRASTERCONTEXTSTACKSIZE];
     RwInt32             rasterSP;
     RwRaster            dummyRaster;
+
     RwFreeList         *rasterFreeList;
 };
 
-
+/* RWPUBLIC */
 
 
 /****************************************************************************
@@ -77,6 +80,7 @@ extern RwBool       RwRasterDestroy(RwRaster * raster);
 extern RwRaster    *RwRasterShowRaster(RwRaster * raster, void *dev,
                                        RwUInt32 flags);
 
+/* RWPUBLICEND */
 
 /* Opening and closing */
 extern void        *_rwRasterClose(void *instance, RwInt32 offset,
@@ -84,11 +88,12 @@ extern void        *_rwRasterClose(void *instance, RwInt32 offset,
 extern void        *_rwRasterOpen(void *instance, RwInt32 offset,
                                       RwInt32 size);
 
-
+/* RWPUBLIC */
 #ifdef    __cplusplus
 }
 #endif                          /* __cplusplus */
 
+/* RWPUBLICEND */
 
 #endif                          /* RWRASTER_H */
 

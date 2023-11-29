@@ -17,7 +17,7 @@
 
 #include "bamatrix.h"
 
-
+/* RWPUBLIC */
 
 /*
  * Typedef for pointer to Vector multiplication by Matrix function
@@ -28,7 +28,7 @@ typedef RwV3d *(*rwVectorMultFn) (RwV3d * pointsOut,
                                   RwInt32 numPoints,
                                   const RwMatrix * matrix);
 
-
+/* RWPUBLICEND */
 
 typedef struct rwVectorGlobals rwVectorGlobals;
 struct rwVectorGlobals
@@ -39,7 +39,7 @@ struct rwVectorGlobals
     rwVectorMultFn multVector;
 };
 
-
+/* RWPUBLIC */
 
 
 
@@ -56,6 +56,8 @@ extern "C"
 {
 #endif         /* __cplusplus */
 
+/* RWPUBLICEND */
+
 
 /* Opening and closing */
 extern void *_rwVectorOpen(void *instance,
@@ -63,11 +65,12 @@ extern void *_rwVectorOpen(void *instance,
 extern void *_rwVectorClose(void *instance,
                             RwInt32 offset, RwInt32 size);
 
+/* RWPUBLIC */
 #ifdef    __cplusplus
 }
 #endif         /* __cplusplus */
 
 
-
+/* RWPUBLICEND */
 
 #endif         /* RWVECTOR_H */

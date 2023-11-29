@@ -11,6 +11,7 @@
 
 
 
+/* RWPUBLIC */
 
 /****************************************************************************
  Defines
@@ -96,6 +97,7 @@ typedef void        (RWASMCALL * rwMatrixMultFn) (RwMatrix * dstMat,
 
 
 
+
 typedef struct RwMatrixTolerance RwMatrixTolerance;
 struct RwMatrixTolerance
 {
@@ -107,7 +109,7 @@ struct RwMatrixTolerance
         /**< Tolerance within which matrix is deemed to be identity */
 };
 
-
+/* RWPUBLICEND */
 
 typedef struct rwMatrixGlobals rwMatrixGlobals;
 struct rwMatrixGlobals
@@ -118,7 +120,7 @@ struct rwMatrixGlobals
     RwMatrixTolerance   tolerance;
 };
 
-
+/* RWPUBLIC */
 
 
 
@@ -137,7 +139,7 @@ RwEngineSetMatrixTolerances(const RwMatrixTolerance * const tolerance);
 
 #define RwMatrixSetIdentity(m)   RwMatrixSetIdentityMacro(m)
 
-
+/* RWPUBLICEND */
 
 extern void *
 _rwMatrixOpen(void *instance,
@@ -149,7 +151,7 @@ _rwMatrixClose(void *instance,
                RwInt32 offset,
                RwInt32 size);
 
-
+/* RWPUBLIC */
 #ifdef    __cplusplus
 }
 #endif                          /* __cplusplus */
@@ -169,7 +171,7 @@ MACRO_STOP
 
 
 
-
+/* RWPUBLICEND */
 
 #define rwMatrixInitializeIdentity(m, t)        \
 MACRO_START                                     \

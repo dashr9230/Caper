@@ -18,7 +18,7 @@
  ************************************************************************/
 
 
-
+/* RWPUBLIC */
 #define RWECODE(a,b) a,
 
 /* Construct an enum type with all the plugin error codes (for the app to use) */
@@ -29,6 +29,8 @@ enum RwErrorCodePlugin_errcore
 typedef enum RwErrorCodePlugin_errcore RwErrorCodePlugin_errcore;
 
 #undef RWECODE
+
+/* RWPUBLICEND */
 
 #undef RWECODE
 

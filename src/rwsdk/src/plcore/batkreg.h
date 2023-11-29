@@ -9,6 +9,8 @@
 #define RWTKREG_H
 
 
+/* RWPUBLIC */
+
 /**
  * \ingroup datatypes
  * \ref RwPluginObjectConstructor represents the callback
@@ -123,12 +125,15 @@ extern          "C"
 {
 #endif         /* __cplusplus */
 
+/* RWPUBLICEND */
+
 /* Opening/Closing */
 extern RwBool
 _rwPluginRegistryOpen(void);
 extern RwBool
 _rwPluginRegistryClose(void);
 
+/* RWPUBLIC */
 
 extern RwInt32
 _rwPluginRegistryAddPlugin(RwPluginRegistry * reg,
@@ -158,6 +163,8 @@ RwPluginRegistry *_rwPluginRegistryCopyObject(const RwPluginRegistry * reg,
 #ifdef    __cplusplus
 }
 #endif         /* __cplusplus */
+
+/* RWPUBLICEND */
 
 #endif         /* RWTKREG_H */
 
