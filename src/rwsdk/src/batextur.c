@@ -54,7 +54,7 @@
 /* Texture handling */
 #include "batextur.h"
 
-#include <windows.h> /* TODO: remove windows.h here */
+
 
 
 

@@ -110,7 +110,6 @@ static RwModuleInfo rasterModule;
  * \see RwRasterCreate
  *
  */
-#include <windows.h>
 RwBool
 RwRasterDestroy(RwRaster * raster)
 {
