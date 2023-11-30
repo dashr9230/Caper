@@ -3,19 +3,15 @@ import sys
 import os
 import time
 
-if len(sys.argv) < 2:
+arg_count = len(sys.argv)
+if arg_count < 2:
     print('No header name specified.')
     exit(1)
 
 current_path = os.getcwd() + '\\'
 header_name = sys.argv[1]
 
-system_headers = [
-'stdarg.h',
-'stddef.h',
-'stdio.h',
-'stdlib.h',
-]
+system_headers = [sys.argv[i] for i in range(2, arg_count)]
 
 header_list = []
 with open(current_path + header_name + '.lst', 'r') as f:
