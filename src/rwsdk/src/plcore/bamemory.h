@@ -54,7 +54,14 @@
 #endif /* (!defined(RwRealloc)) */
 
 
+#if (!defined(RWCRTCHECKMEMORY))
+#define RWCRTCHECKMEMORY()     /* No Op */
+#endif /* (!defined(RWCRTCHECKMEMORY)) */
 
+
+#if (!defined(RWCRTHEAPDIFFERENCESINCE))
+#define RWCRTHEAPDIFFERENCESINCE(_Then)           /* No Op */
+#endif /* (!defined(RWCRTHEAPDIFFERENCESINCE)) */
 
 
 /****************************************************************************

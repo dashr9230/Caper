@@ -21,6 +21,8 @@
 
 /* RWPUBLIC */
 
+#define rwLITTLEENDIAN         /* This is a little endian machine */
+
 typedef int  RwInt32;
 typedef unsigned int RwUInt32;
 

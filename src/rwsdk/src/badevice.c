@@ -100,6 +100,19 @@ static RwGlobals    staticGlobals;
 
 
 
+/****************************************************************************
+ Local (static) Globals
+ */
+
+
+#if (defined(RWDEBUG) && defined(RWMEMDEBUG) && defined(_MSC_VER))
+#if ((_MSC_VER>=1000) && defined(_DEBUG))
+static _CrtMemState _InitialMemState;
+#endif /* ((_MSC_VER>=1000) && defined(_DEBUG)) */
+#endif /* (defined(RWDEBUG) && defined(RWMEMDEBUG) && defined(_MSC_VER)) */
+
+
+
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -174,6 +187,10 @@ FreeWrapper(RwFreeList *fl, void *pData)
 
     RWRETURN(fl);
 }
+
+
+
+
 
 
 
@@ -443,9 +460,39 @@ RwEngineOpen(RwEngineOpenParams *initParams)
 RwBool
 RwEngineTerm(void)
 {
-    // TODO: RwEngineTerm
+    RwBool result;
 
-    return FALSE;
+#if (0)
+    RWAPIFUNCTION(RWSTRING("RwEngineTerm"));
+#endif /* (0) */
+
+    /* Can't shut down whilst there are instances opened */
+
+    result = (0 == engineInstancesOpened);
+
+    if (result)
+    {
+        _rwPluginRegistryClose();
+        _rwFileSystemClose();
+        _rwMemoryClose();
+#ifdef RWDEBUG
+        _rwDebugClose();
+#endif /* RWDEBUG */
+
+        /* The processor fast divide mode stuff is done in
+         * RwCameraBeginUpdate and RwCameraEndUpdate.
+         */
+
+        /* Mark the engine as terminated */
+        RWSRCGLOBAL(engineStatus) = rwENGINESTATUSIDLE;
+
+        RWCRTCHECKMEMORY();
+
+        RWCRTHEAPDIFFERENCESINCE(&_InitialMemState);
+
+    }
+
+    return (result);
 }
 
 
