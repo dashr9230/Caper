@@ -22,7 +22,7 @@
 /*************************************************************************
  *
  * Filename: <D:\Repositories\Caper\src\rwsdk\include\d3d8\rwcore.h>
- * Automatically Generated on: Wed Nov 29 19:14:49 2023
+ * Automatically Generated on: Thu Nov 30 22:51:32 2023
  *
  ************************************************************************/
 
@@ -186,6 +186,40 @@ struct RwImage
     char _pad[28];
     /* TODO: RwImage (size: 28 bytes) */
 };
+
+/**
+ * \ingroup datatypes
+ * \ref RwImageCallBackRead 
+ * is the function registered with \ref RwImageRegisterImageFormat that is used,
+ * for example by \ref RwImageRead and \ref RwImageReadMaskedImage,
+ * to read images of a specific format from a disk file.
+ * 
+ * \param  imageName   Pointer to a string containing the file name of the image.
+ *
+ * \see RwImageRegisterImageFormat
+ *
+ */
+typedef RwImage *(*RwImageCallBackRead)(const RwChar * imageName);
+
+/**
+ * \ingroup datatypes
+ * \ref RwImageCallBackWrite 
+ * is the function registered with \ref RwImageRegisterImageFormat that is used,
+ * for example by \ref RwImageWrite, 
+ * to write images of a specific format to a disk file.
+ * 
+ * \param  image   Pointer to the image.
+ *
+ * \param  imageName   Pointer to a string containing the file name
+ * of the image.
+ *
+ *
+ * \return Pointer to the written image.
+ *
+ * \see RwImageRegisterImageFormat
+ *
+ */
+typedef RwImage *(*RwImageCallBackWrite)(RwImage *image, const RwChar *imageName);
 
 
 

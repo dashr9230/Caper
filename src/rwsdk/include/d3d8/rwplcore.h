@@ -22,7 +22,7 @@
 /*************************************************************************
  *
  * Filename: <D:\Repositories\Caper\src\rwsdk\include\d3d8\rwplcore.h>
- * Automatically Generated on: Wed Nov 29 19:14:49 2023
+ * Automatically Generated on: Thu Nov 30 22:51:32 2023
  *
  ************************************************************************/
 
@@ -39,6 +39,8 @@
 /*--- Automatically derived from: D:\Repositories\Caper\src\rwsdk\os/win/ostypes.h ---*/
 #ifndef WIN_OSTYPES_H
 #define WIN_OSTYPES_H
+
+#define rwLITTLEENDIAN         /* This is a little endian machine */
 
 typedef int  RwInt32;
 typedef unsigned int RwUInt32;
@@ -455,7 +457,14 @@ typedef enum RwErrorCodePlugin_errcore RwErrorCodePlugin_errcore;
 #endif /* (!defined(RwRealloc)) */
 
 
+#if (!defined(RWCRTCHECKMEMORY))
+#define RWCRTCHECKMEMORY()     /* No Op */
+#endif /* (!defined(RWCRTCHECKMEMORY)) */
 
+
+#if (!defined(RWCRTHEAPDIFFERENCESINCE))
+#define RWCRTHEAPDIFFERENCESINCE(_Then)           /* No Op */
+#endif /* (!defined(RWCRTHEAPDIFFERENCESINCE)) */
 
 
 /****************************************************************************
@@ -1624,5 +1633,21 @@ extern "C"
 
 
 /*--- Automatically derived from: D:\Repositories\Caper\src\rwsdk\src/plcore/babinary.h ---*/
+/****************************************************************************
+ Function prototypes
+ */
+
+#ifdef    __cplusplus
+extern "C"
+{
+#endif                          /* __cplusplus */
+
+/* Binary Portability Functions */
+extern void *RwMemNative32(void *mem, RwUInt32 size);
+
+#ifdef    __cplusplus
+}
+#endif                          /* __cplusplus */
+
 
 #endif /* RWPLCORE_H */
