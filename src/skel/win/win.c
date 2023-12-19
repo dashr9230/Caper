@@ -28,7 +28,6 @@ static const RwChar *AppClassName = RWSTRING("RwAppClass");
 
 
 
-
 /* platform specfic global data */
 
 typedef struct
@@ -44,10 +43,6 @@ static psGlobalType PsGlobal;
 
 
 #define PSGLOBAL(var) (((psGlobalType *)(RsGlobal.ps))->var)
-
-
-
-
 
 /*
  *****************************************************************************
@@ -68,6 +63,7 @@ psErrorMessage(const RwChar *message)
 
     return;
 }
+
 
 /*
  *****************************************************************************
@@ -112,21 +108,12 @@ psTimer(void)
     timeGetDevCaps(&TimeCaps, sizeof(TIMECAPS));
     timeBeginPeriod(TimeCaps.wPeriodMin);
 
-    time = (RwUInt32)timeGetTime();
+    time = (RwUInt32) timeGetTime();
 
     timeEndPeriod(TimeCaps.wPeriodMin);
 
     return time;
 }
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -150,7 +137,7 @@ void
 psMouseSetPos(RwV2d *pos)
 {
     POINT point;
-    
+
     validDelta = FALSE;
 
     point.x = (RwInt32) pos->x;
@@ -178,6 +165,7 @@ psGetMemoryFunctions(void)
 {
     return 0;
 }
+
 
 /*
  *****************************************************************************
@@ -290,7 +278,6 @@ psInitialize(void)
 void
 psTerminate(void)
 {
-
     return;
 }
 
@@ -311,22 +298,18 @@ psAlwaysOnTop(RwBool alwaysOnTop)
     if( alwaysOnTop )
     {
         return (RwBool)SetWindowPos(hwnd, HWND_TOPMOST,
-                                    winRect.left, winRect.top,
-                                    winRect.right - winRect.left,
-                                    winRect.bottom - winRect.top, 0);
+                                     winRect.left, winRect.top,
+                                     winRect.right - winRect.left,
+                                     winRect.bottom - winRect.top, 0);
     }
     else
     {
         return (RwBool)SetWindowPos(hwnd, HWND_NOTOPMOST,
-                                    winRect.left, winRect.top,
-                                    winRect.right - winRect.left,
-                                    winRect.bottom - winRect.top, 0);
+                                     winRect.left, winRect.top,
+                                     winRect.right - winRect.left,
+                                     winRect.bottom - winRect.top, 0);
     }
 }
-
-
-
-
 
 
 
