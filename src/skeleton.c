@@ -68,10 +68,25 @@ RsWarningMessage(const RwChar * text)
 }
 
 
+/*
+ *****************************************************************************
+ */
+RwChar
+RsPathGetSeparator(void)
+{
+    return psPathGetSeparator();
+}
 
+/*
+ *****************************************************************************
+ */
+void
+RsCameraShowRaster(RwCamera * camera)
+{
+    psCameraShowRaster(camera);
 
-
-
+    return;
+}
 
 /*
  *****************************************************************************

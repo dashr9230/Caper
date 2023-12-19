@@ -151,10 +151,66 @@ psMouseSetPos(RwV2d *pos)
 }
 
 
+/*
+ *****************************************************************************
+ */
+RwChar *
+psPathnameCreate(const RwChar *srcBuffer)
+{
+    RwChar *dstBuffer;
+    RwChar *charToConvert;
+
+    /*
+     * First duplicate the string
+     */
+    dstBuffer = (RwChar *)
+        RwMalloc(sizeof(RwChar) * (rwstrlen(srcBuffer) + 1));
+
+    if( dstBuffer )
+    {
+        rwstrcpy(dstBuffer, srcBuffer);
+
+        /* 
+         * Convert a path for use on Windows. 
+         * Convert all /s and :s into \s 
+         */
+        while( (charToConvert = rwstrchr(dstBuffer, '/')) )
+        {
+            *charToConvert = '\\';
+        }
+#if 0
+        while( (charToConvert = rwstrchr(dstBuffer, ':')) )
+        {
+            *charToConvert = '\\';
+        }
+#endif
+    }
+}
 
 
+/*
+ *****************************************************************************
+ */
+void
+psPathnameDestroy(RwChar *buffer)
+{
+    if( buffer )
+    {
+        RwFree(buffer);
+    }
+
+    return;
+}
 
 
+/*
+ *****************************************************************************
+ */
+RwChar
+psPathGetSeparator(void)
+{
+    return '\\';
+}
 
 
 /*

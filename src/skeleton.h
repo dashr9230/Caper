@@ -179,7 +179,8 @@ RsRwInitialize(void *param);
 extern RwBool                   
 RsAlwaysOnTop(RwBool alwaysOnTop);
 
-
+extern RwChar                   
+RsPathGetSeparator(void);
 
 extern RwUInt32                 
 RsTimer(void);
@@ -195,6 +196,8 @@ RsMouseSetVisibility(RwBool visible);
 extern void                     
 RsMouseSetPos(RwV2d *pos);
 
+extern void                     
+RsPathnameDestroy(RwChar *buffer);
 
 
 
