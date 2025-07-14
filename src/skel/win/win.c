@@ -44,24 +44,24 @@ static psGlobalType PsGlobal;
 
 #define PSGLOBAL(var) (((psGlobalType *)(RsGlobal.ps))->var)
 
+/* Error and warning dialog box titles */
+
+static const RwChar *ErrorDialogTitle =
+RWSTRING("RenderWare(tm) Application Error");
+static const RwChar *WarningDialogTitle =
+RWSTRING("RenderWare(tm) Application Warning");
+
 /*
  *****************************************************************************
  */
 void
 psErrorMessage(const RwChar *message)
 {
-#ifdef _DEBUG
-    OutputDebugString("Error: ");
-    OutputDebugString(message);
-    OutputDebugString("\n");
-#else
-    MessageBox(NULL,
-               message,
-               RWSTRING("RenderWare(tm) Application Error"),
-               MB_ICONERROR | MB_TASKMODAL | MB_TOPMOST);
+    MessageBox(NULL, message, ErrorDialogTitle,
+#ifndef UNDER_CE
+               MB_TASKMODAL |
 #endif
-
-    return;
+               MB_ICONERROR | MB_TOPMOST | MB_OK);
 }
 
 
@@ -71,18 +71,11 @@ psErrorMessage(const RwChar *message)
 void
 psWarningMessage(const RwChar *message)
 {
-#ifdef _DEBUG
-    OutputDebugString("Warning: ");
-    OutputDebugString(message);
-    OutputDebugString("\n");
-#else
-    MessageBox(NULL,
-               message,
-               RWSTRING("RenderWare(tm) Application Warning"),
-               MB_ICONWARNING | MB_TASKMODAL | MB_TOPMOST);
+    MessageBox(NULL, message, WarningDialogTitle,
+#ifndef UNDER_CE
+               MB_TASKMODAL |
 #endif
-
-    return;
+               MB_ICONWARNING | MB_TOPMOST | MB_OK);
 }
 
 
@@ -102,15 +95,17 @@ psWarningMessage(const RwChar *message)
 RwUInt32
 psTimer(void)
 {
-    TIMECAPS TimeCaps;
+    TIMECAPS ptc;
     RwUInt32 time;
 
-    timeGetDevCaps(&TimeCaps, sizeof(TIMECAPS));
-    timeBeginPeriod(TimeCaps.wPeriodMin);
-
+#ifdef UNDER_CE
+    time = (RwUInt32) GetTickCount();
+#else
+    timeGetDevCaps(&ptc, sizeof(ptc));
+    timeBeginPeriod(ptc.wPeriodMin);
     time = (RwUInt32) timeGetTime();
-
-    timeEndPeriod(TimeCaps.wPeriodMin);
+    timeEndPeriod(ptc.wPeriodMin);
+#endif
 
     return time;
 }
